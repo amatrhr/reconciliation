@@ -1,4 +1,4 @@
-from numpy import sqrt, array
+from numpy import sqrt, array, append
 
 
 class Tank:
@@ -13,9 +13,9 @@ class Tank:
 
     def update_level(self):
         self.outflow = self.valve_coef * sqrt(9.81 * self.height)
-        self.height = height + (1 / self.outlet_area) * (self.inflow - self.outflow)
+        self.height = self.height + (1 / self.outlet_area) * (self.inflow - self.outflow)
         self.time += 1
-        self.history.append([self.time, self.inflow, self.outflow, self.height])
+        self.history = append(self.history, [self.time, self.inflow, self.outflow, self.height])
 
     def set_inflow(self, new_inflow):
         self.inflow = new_inflow
