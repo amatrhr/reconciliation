@@ -32,3 +32,9 @@ material flow graph and assesses a error statistic in each subgraph
 - Apply SHAP to the resulting fits
 - Compare measurement error variances to SHAP value variances (i)
 - Use Spearman correlation of SHAP values and errors to assess their association (ii)
+
+# Notes 
+
+# Other references
+- [Elman finding structure in time](https://crl.ucsd.edu/~elman/Papers/fsit.pdf)
+- [Shapley papers](https://www.rand.org/pubs/authors/s/shapley_lloyd_s.html)
