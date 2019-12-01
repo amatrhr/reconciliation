@@ -7,10 +7,27 @@ class Tank:
         self.outlet_area = outlet_area
         self.time = 0
         self.history = array([self.time, self.height])
+        self.outflow = self.valve_coef * sqrt(9.81 * self.height)
 
     def update_level(self):
-        outflow = self.valve_coef*sqrt(9.81*self.height)
-        self.height = height  + (1/self.outlet_area)*(self.inflow - outflow)
+        self.outflow = self.valve_coef*sqrt(9.81*self.height)
+        self.height = height  + (1/self.outlet_area)*(self.inflow - self.outflow)
         self.time += 1
-        self.history.append([self.time, self.height])
+        self.history.append([self.time, self.inflow, self.outflow, self.height])
 
+    def set_inflow(self, new_inflow):
+        self.inflow = new_inflow
+
+    def measure_inflow(self, gross_error = False):
+        return self.inflow + gross_error
+
+    def measure_outflow(self, gross_error = False):
+        return self.outflow + gross_error
+
+    def measure_height(self, gross_error = False):
+        return self.height + gross_error
+
+    def measure_history(self, gross_in, gross_out, gross_height):
+        measured_history = self.history.copy()
+        # add measurement error functions
+        return measured_history
