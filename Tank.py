@@ -1,5 +1,14 @@
+from numpy import sqrt, array
 class Tank:
-    def __init__(self, height = 0, inflow = 0, outflow = 0):
+    def __init__(self, height=0., inflow=0., valve_coef=1., outlet_area=1.):
         self.height = height
         self.inflow = inflow
-        self.outflow = outflow
+        self.valve_coef = valve_coef
+        self.outlet_area = outlet_area
+        self.time = 0
+
+    def update_level(self):
+        outflow = self.valve_coef*sqrt(9.81*self.height)
+        self.height = height  + (1/self.outlet_area)*(self.inflow - outflow)
+        self.time += 1
+
