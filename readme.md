@@ -7,13 +7,13 @@ water heater (boiler) by using the meter outside the house and measuring the vol
     + The key is to aggregate nodes; I treat the tap + water heater as one unit for analysis; Mah et al. lay out the
     assumptions required to do this, to estimate measurement error accounting for unmeasured nodes, and to estimate flow
     through unmeasured nodes
-    + (https://gregstanleyandassociates.com/ReconciliationRectificationProcessData-1976.pdf)[Original paper]
-    + (http://users.iems.northwestern.edu/~ajit/papers/64)%20Data%20Reconciliation-Technometrics%20Paper.pdf)[Less graph theory, more statistical tests]
-- (http://nn.cs.utexas.edu/downloads/papers/karjala.ijcnn92.pdf)[Himmelblau and Karjala (among others) propose using a recurrent neural network to do this]
+    + [Original paper](https://gregstanleyandassociates.com/ReconciliationRectificationProcessData-1976.pdf)
+    + [Less graph theory, more statistical tests](http://users.iems.northwestern.edu/~ajit/papers/64)%20Data%20Reconciliation-Technometrics%20Paper.pdf)
+- [Himmelblau and Karjala (among others) propose using a recurrent neural network to do this](http://nn.cs.utexas.edu/downloads/papers/karjala.ijcnn92.pdf)
     + This paper also gives a simple model process--filling and draining a tank and reconciling measurements on input
     flow, output flow, and liquid height
 # SHAP
-- (https://github.com/slundberg/shap)[SHAP] uses simple models as 'explainers' of neural network fits
+- [SHAP](https://github.com/slundberg/shap) uses simple models as 'explainers' of neural network fits
 - The importance of a feature, as assessed using SHAP, is an estimate of the difference in average prediction error between all
 possible models _with_ the feature vs. the average prediction error in all models _without_ the feature
 
