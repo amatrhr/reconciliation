@@ -8,7 +8,7 @@ water heater (boiler) by using the meter outside the house and measuring the vol
     assumptions required to do this, to estimate measurement error accounting for unmeasured nodes, and to estimate flow
     through unmeasured nodes
     + [Original paper](https://gregstanleyandassociates.com/ReconciliationRectificationProcessData-1976.pdf)
-    + Less graph theory, more statistical tests: <a href="http://users.iems.northwestern.edu/~ajit/papers/64) Data Reconciliation-Technometrics Paper.pdf">
+    + <a href="http://users.iems.northwestern.edu/~ajit/papers/64) Data Reconciliation-Technometrics Paper.pdf">Less graph theory, more statistical tests</a>
 - [Himmelblau and Karjala (among others) propose using a recurrent neural network to do this](http://nn.cs.utexas.edu/downloads/papers/karjala.ijcnn92.pdf)
     + This paper also gives a simple model process--filling and draining a tank and reconciling measurements on input
     flow, output flow, and liquid height
